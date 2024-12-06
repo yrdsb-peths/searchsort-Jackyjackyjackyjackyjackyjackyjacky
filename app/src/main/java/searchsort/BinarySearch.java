@@ -33,7 +33,7 @@ public class BinarySearch extends Search {
      */
     @Override
     public int recursiveFind(int[] arr, int target) {
-
+        int min = 0;
 
         return -1;
     }
