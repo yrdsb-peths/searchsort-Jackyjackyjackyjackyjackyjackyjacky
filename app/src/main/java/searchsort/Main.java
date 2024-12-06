@@ -18,5 +18,8 @@ public class Main {
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }
+
+        BinarySearch a = new BinarySearch();
+        System.out.println(a.find(arr, 2));
     }
 }

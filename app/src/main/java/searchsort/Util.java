@@ -27,7 +27,7 @@ public class Util {
         // Note: This generates a random number between 0 and 5:
         // int randomNum = random.nextInt(6);
 
-        for(int i = arr.length - 1; i > 0; i++) {
+        for(int i = arr.length - 1; i > 0; i--) {
             int j = random.nextInt(i + 1);
             exch(arr, i, j);
         }

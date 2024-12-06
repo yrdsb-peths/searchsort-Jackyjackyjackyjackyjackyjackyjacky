@@ -6,23 +6,21 @@ public class BinarySearch extends Search {
      * search. Return -1 if target is not found in arr.
      */
     @Override
-    public int find(int[] arr, int target) {
-        // sort the array first
-
+    public  int find(int[] arr, int target) {
         int min = 0;
         int max = arr.length - 1;
 
-        while(min != max) {
-            int middle = (max + min) / 2;
-            if(arr[middle] == target) {
+        while(min <= max) {
+            int middle = min + (max - min) / 2;
+            if(arr[middle] == target) { 
                 return middle;
             }
 
             if(arr[middle] > target) {
-                max = middle;
+                max = middle - 1;
             }
             else {
-                min = middle;
+                min = middle + 1;
             }
         }
 
