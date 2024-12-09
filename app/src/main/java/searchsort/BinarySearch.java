@@ -7,23 +7,25 @@ public class BinarySearch extends Search {
      */
     @Override
     public  int find(int[] arr, int target) {
+        //SelectionSort.sort(arr);
         int min = 0;
         int max = arr.length - 1;
 
         while(min <= max) {
             int middle = (max + min) / 2;
-            if(arr[middle] == target) { 
+
+            if(arr[middle] == target) {
                 return middle;
             }
 
             if(arr[middle] > target) {
+                
                 max = middle - 1;
             }
             else {
                 min = middle + 1;
             }
         }
-
         return -1;
     }
 
@@ -33,6 +35,7 @@ public class BinarySearch extends Search {
      */
     @Override
     public int recursiveFind(int[] arr, int target) {
+        //SelectionSort.sort(arr);
         return recursiveBinary(arr, target, arr.length - 1, 0);
     }
 
@@ -50,5 +53,4 @@ public class BinarySearch extends Search {
         }
         return recursiveBinary(arr, target, max, min + 1);
     }
-
 }

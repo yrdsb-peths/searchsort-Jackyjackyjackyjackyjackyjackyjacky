@@ -20,6 +20,7 @@ public class Main {
         }
 
         BinarySearch a = new BinarySearch();
+        System.out.println();
         System.out.println(a.find(arr, 2));
     }
 }
